@@ -165,8 +165,8 @@
                             <td>Batas Kelas</td>
                             <td>Titik tengah Kelas</td>
                             <td>Frekuensi</td>
-                            <td>FK (&le;) batas bawah</td>
-                            <td>Frekuensi Komulatif(&le;)</td>
+                            <td>FK (&ge;) batas bawah</td>
+                            <td>Frekuensi Komulatif(&ge;)</td>
                             <td>FK(%)</td>
                           </tr>
                         </thead>
@@ -206,7 +206,7 @@
             },
             methods: {
                 insertData(){
-                  this.sampel = this.sementara.split(" ").map(Number)
+                  this.sampel = this.sementara.split(" ")
                   this.sementara = null
                   this.distributed()
                 }
@@ -268,3 +268,4 @@
     </script>
 </body>
 </html>
+
