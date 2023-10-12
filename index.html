@@ -8,72 +8,76 @@
 </head>
 <body>
     <div id="app">
-        <div class="container-fluid">
-          <div class="container mt-2">
+        <div class="container-fluid mt-2">
             <div class="row">
-              <div class="col-10">
+              <div class="col-md-10 col-12">
                 <div class="card">
                   <div class="card-header">
                     <div class="input-group mb-3">
                       <input type="text" class="form-control" placeholder="Data" aria-label="Recipient's username" aria-describedby="button-addon2" v-model="sementara">
                       <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon2" @click="insertData">Button</button>
+                        <button class="btn btn-secondary" type="button" id="button-addon2" @click="insertData">Masukkan data</button>
                       </div>
                     </div>
                   </div>
                   <div class="card-body">
                     Sampel Data : <span v-for="(angka, i) in sampel">{{ `${angka} ` }}</span>  
                   </div>
+                  <div class="card-footer text-muted">
+                    supported by : TI.22.B1 Universitas Pelita Bangsa
+                  </div>
                 </div>
               </div>
             </div>
             <div class="row mt-2">
-              <div class="col-10">
+              <div class="col-md-10 col-12">
                 <div class="card">
                   <div class="card-header">
                   </div>
                   <div class="card-body">
-                    <table class="table table-bordered">
-                      <tr>
-                        <td>Data yang terurut</td>
-                        <td>{{ properti.sortedSampel.join(" ") }}</td>
-                      </tr>
-                      <tr>
-                        <td>Banyak kelas</td>
-                        <td>{{ `${properti.classes} / ${Math.round(properti.classes)}` }}</td>
-                      </tr>
-                      <tr>
-                        <td>Rentang Data</td>
-                        <td>{{ properti.range }}</td>
-                      </tr>
-                      <tr>
-                        <td>Lebar kelas</td>
-                        <td>{{ `${(properti.range/properti.classes)} / ${properti.interval}` }}</td>
-                      </tr>
-                      <tr>
-                        <td>Data kelas</td>
-                        <td>
-                          <table>
-                            <tr>
-                              <td>Interval Kelas</td>
-                              <td>Data</td>
-                              <td>Frekuensi</td>
-                            </tr>
-                            <tr v-for="(kelas, i) in kelas">
-                              <td>{{ `${kelas.bot} - ${kelas.top}` }}</td>
-                              <td><span v-for="angka in kelas.deret">{{ `${angka} ` }}</span></td>
-                              <td>{{ `${kelas.frekuensi}` }}</td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                    </table>
+                    <div class="table-responsive">
+                      <table class="table table-bordered">
+                        <tr>
+                          <td>Data yang terurut</td>
+                          <td>{{ properti.sortedSampel.join(" ") }}</td>
+                        </tr>
+                        <tr>
+                          <td>Banyak kelas</td>
+                          <td>{{ `${properti.classes} / ${Math.round(properti.classes)}` }}</td>
+                        </tr>
+                        <tr>
+                          <td>Rentang Data</td>
+                          <td>{{ properti.range }}</td>
+                        </tr>
+                        <tr>
+                          <td>Lebar kelas</td>
+                          <td>{{ `${(properti.range/properti.classes)} / ${properti.interval}` }}</td>
+                        </tr>
+                        <tr>
+                          <td>Data kelas</td>
+                          <td>
+                            <table>
+                              <tr>
+                                <td>Interval Kelas</td>
+                                <td>Data</td>
+                                <td>Frekuensi</td>
+                              </tr>
+                              <tr v-for="(kelas, i) in kelas">
+                                <td>{{ `${kelas.bot} - ${kelas.top}` }}</td>
+                                <td><span v-for="angka in kelas.deret">{{ `${angka} ` }}</span></td>
+                                <td>{{ `${kelas.frekuensi}` }}</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="row mt-2 mb-2">
-              <div class="col-10">
+              <div class="col-md-10 col-12">
                 <div class="card">
                   <div class="card-header">
                     <div class="card-body-title">
@@ -110,7 +114,7 @@
               </div>
             </div>
             <div class="row mt-2 mb-2">
-              <div class="col-10">
+              <div class="col-md-10 col-12">
                 <div class="card">
                   <div class="card-header">
                     <div class="card-body-title">
@@ -149,7 +153,7 @@
               </div>
             </div>
             <div class="row mt-2 mb-2">
-              <div class="col-10">
+              <div class="col-md-10 col-12">
                 <div class="card">
                   <div class="card-header">
                     <div class="card-body-title">
@@ -187,7 +191,6 @@
                 </div>
               </div>
             </div>
-          </div>
         </div>
     </div>
         
